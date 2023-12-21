@@ -12,6 +12,10 @@ export class UserService {
     return this.http.get('https://658484494d1ee97c6bcfe849.mockapi.io/api/users');
   }
 
+  getUser(id: number) {
+    return this.http.get('https://658484494d1ee97c6bcfe849.mockapi.io/api/users/' + id);
+  }
+
   addUser(user: User) {
     return this.http.post('https://658484494d1ee97c6bcfe849.mockapi.io/api/users', user);
   }

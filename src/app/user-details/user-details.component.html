@@ -1,1 +1,19 @@
-<p>user-details works!</p>
+@if (user) {
+<div>
+  <h2>User Details</h2>
+
+  <div><label>Id: </label>{{ user.id }}</div>
+  <div><label>Name: </label>{{ user.name }}</div>
+  <div><label>Occupation: </label>{{ user.occupation }}</div>
+  <div><label>Email: </label>{{ user.email }}</div>
+  <div><label>Bio: </label>{{ user.bio }}</div>
+
+  <button (click)="goBack()">Go Back</button>
+</div>
+
+} @else {
+<div>
+  <h2>User not found</h2>
+  <button (click)="goBack()">Go Back</button>
+</div>
+}
